@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Link, Route, Routes } from "react-router-dom";
 import ProductsPage from "./pages/Products";
+import HomePage from "./pages/HomePage";
+import CreateProducts from "./pages/CreateProduct";
 
 export default function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -137,11 +139,11 @@ export default function App() {
       {/* Main Content */}
       <div className="flex-1 bg-gray-800 p-0 text-white md:p-10 lg:ml-72">
         <Routes>
-          <Route path="/" element={<h1>Hello! This is HomePage</h1>} />
+          <Route path="/" element={<HomePage />} />
           <Route path="/products/all" element={<ProductsPage />} />
           <Route
             path="/products/create"
-            element={<h1>Hello! This is Create ProductsPage</h1>}
+            element={<CreateProducts />}
           />
           <Route
             path="/users/all"

@@ -1,6 +1,13 @@
 import { Button } from "@material-tailwind/react";
 
-export default function ProductCard({ img, title, text, price, color, quantity }) {
+export default function ProductsCard({
+  img,
+  title,
+  text,
+  price,
+  color,
+  quantity,
+}) {
   return (
     <div className="card max-w-sm rounded-lg shadow-lg bg-gray-700 dark:bg-gray-800 transition-colors duration-300 p-6 m-3 md:m-0">
       <img
@@ -18,7 +25,9 @@ export default function ProductCard({ img, title, text, price, color, quantity }
         {price ? `$${price}` : "Price not available"}
       </p>
       <div className="flex gap-4">
-        <Button className="bg-red-500 hover:bg-red-700 text-white">Delete</Button>
+        <Button className="bg-red-500 hover:bg-red-700 text-white">
+          Delete
+        </Button>
         <Button className="bg-transparent border-solid border-[1px] border-white text-white hover:bg-gray-600">
           Update
         </Button>
